@@ -1,6 +1,36 @@
 
-let variable1 = "lidar";
-const variable2 = "ben";
+let char = 'A';
+let int = 1;
+let string = "this is a string";
+
+console.log(string[0]);
+
+let charArray = ['t','h','i','s' ,'i','s'];
+let intArray = [1,2,3];
+
+let objectExample = {
+    name: "lidar",
+    age: "27",
+    family: "mark"
+};
+
+
+
+
+function getPersonObject(nameParam,ageParam,familyParam){
+
+    let returnJson = {
+        name: nameParam,
+        age: ageParam,
+        family: familyParam
+    };
+
+    // console.log(returnJson);
+    return returnJson;
+}
+
+
+const variable2 = ["ben","lidar"];
 
 let namesArray = ["lidar","ben"];
 // let whatIsIOnIndex0 = namesArray[0];
@@ -36,8 +66,18 @@ function forLoopExample (array){
 }
 
 
+function getFirstLetterOfString(string){
+    return string[0];
+}
+
 // [ 0 , 1 , 2 , 3 ]
 // ["a","b","c","d"]
-whileLoopExample(namesArray);
 
-forLoopExample(namesArray);
+// whileLoopExample(namesArray);
+
+// forLoopExample(namesArray);
+
+let json = getPersonObject("ben","35","mark");
+console.log(json.name);
+console.log(json.age);
+console.log(json.family);
