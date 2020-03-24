@@ -38,7 +38,5 @@ process.on('unhandledRejection', () => {});
         });
     } catch (ex) {
         console.log (new Error(ex.message));
-    } finally {
-
     }
 })();

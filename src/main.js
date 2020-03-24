@@ -102,13 +102,19 @@ class Person {
     constructor(name, age, mother) {
         this.name = name;
         this.age = age;
-        this.mother = mother
+        this.mother = mother;
         this.saySomething("created person: " + name)
     }
 
     saySomething(message) {
         console.log(message);
     }
+
+}
+
+
+class BMW_X5{
+
 }
 
 
@@ -121,10 +127,31 @@ class Parent extends Person{
 }
 
 
+/**
+ * example to help you with the BMW exercise.
+ * @type {Array}
+ */
+let cars = [];
+
+for (let i = 0; i < 100 ; i++) {
+    let tempObject = new Person("lidar", "27", "irit");
+    cars.push(tempObject);
+}
+
+console.log(cars);
+
+
+/**
+ * end example
+ */
+
+
+
 let lidarPerson = new Person("lidar", "27", "irit");
 let benPerson = new Person("ben", "35", "li");
 
 let irit = new Parent("irit","?","savta",4);
+
 console.log(irit);
 
 
