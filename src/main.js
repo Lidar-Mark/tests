@@ -255,3 +255,83 @@ let name = "lidar";
 let funcD = (parameter) => {
     console.log("anonymous function: " + parameter);
 };
+
+
+
+
+// Write a function that returns the largest element in a list.
+function getTheLargestElementFromArray(array){
+
+    let largestElement = -9999;
+
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] > largestElement){
+            largestElement = array[i];
+        }
+    }
+
+    return largestElement;
+}
+
+let arr = [4,77,3];
+
+console.log(arr[0]);
+                                  // 0  1  2
+getTheLargestElementFromArray([4,77,3]);
+
+
+
+//Write function that reverses a list, preferably in place.
+
+
+
+let expectedResult = [6,5,4,3,2,1];
+
+function reverseArray(array){
+
+    let reverseArray = [];
+
+    for (let i = array.length-1; i >= 0; i--) {
+        let value = array[i];
+        reverseArray.push(value)
+    }
+
+    return reverseArray;
+}
+
+          //0,1,2,3,4,5
+let arr2 = [1,2,3,4,5,6];
+
+          //0,1,2,3
+let arr3 = [1,2,3,4];
+
+let ans = reverseArray(arr2);
+
+
+
+//Write a function that checks whether an element occurs in a list.
+function exists(array,element){
+
+    let flag = false;
+
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] === element){
+            flag = true;
+        }
+    }
+
+    return flag;
+}
+
+//        i = 0,1,2,3
+exists([1,2,3,4],4);
+
+// console.log(5 === 5);
+// console.log(5 === 4);
+// console.log("lidar" === "lidar");
+// console.log("lidar" === "nir"); //false
+//
+// console.log("lidar" !== "nir"); //true
+
+
+//Write a function that returns the elements on odd positions in a list.
