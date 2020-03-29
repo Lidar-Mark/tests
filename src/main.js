@@ -288,6 +288,11 @@ getTheLargestElementFromArray([4,77,3]);
 let expectedResult = [6,5,4,3,2,1];
 
 
+function printName(name){
+    console.log(name);
+}
+
+printName("lidar mark");
 
         // step 2 arrInput is inserted here
 function reverseArray(array){
