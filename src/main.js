@@ -294,6 +294,11 @@ function printName(name){
 
 printName("lidar mark");
 
+function printHello(){
+    console.log("hello");
+}
+
+printHello();
         // step 2 arrInput is inserted here
 function reverseArray(array){
 
