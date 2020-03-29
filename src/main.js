@@ -287,26 +287,32 @@ getTheLargestElementFromArray([4,77,3]);
 
 let expectedResult = [6,5,4,3,2,1];
 
+
+
+        // step 2 arrInput is inserted here
 function reverseArray(array){
 
-    let reverseArray = [];
+    //step 3
+    let returnedArray = [];
 
     for (let i = array.length-1; i >= 0; i--) {
         let value = array[i];
-        reverseArray.push(value)
+        // step 4 we add values to the new created array from step 3
+        returnedArray.push(value)
     }
 
-    return reverseArray;
+    // step 5  we return the new array
+    return returnedArray;
 }
 
           //0,1,2,3,4,5
-let arr2 = [1,2,3,4,5,6];
+let arrInput = [1,2,3,4,5,6];
 
-          //0,1,2,3
-let arr3 = [1,2,3,4];
+//  step 6 we capture the returned array   step 1  - we call the function with arrInput
+let ans               =                   reverseArray(arrInput);
 
-let ans = reverseArray(arr2);
-
+// step 7 we print the returned array
+console.log(ans);
 
 
 //Write a function that checks whether an element occurs in a list.
@@ -335,3 +341,11 @@ exists([1,2,3,4],4);
 
 
 //Write a function that returns the elements on odd positions in a list.
+
+
+let thisIsPalindrom = "1234321";
+let thisIsNotPalindrom = "12345432";
+
+let isThisPalindrom = "lidar";
+
+let isThis = "ili";
