@@ -308,7 +308,7 @@ function reverseArray(array){
     for (let i = array.length-1; i >= 0; i--) {
         let value = array[i];
         // step 4 we add values to the new created array from step 3
-        returnedArray.push(value)
+        returnedArray.push(value);
     }
 
     // step 5  we return the new array
@@ -359,3 +359,119 @@ let thisIsNotPalindrom = "12345432";
 let isThisPalindrom = "lidar";
 
 let isThis = "ili";
+
+
+function isPalindrome(word){
+
+    let left = "";
+    let right = "";
+
+    for (let i = 0; i < word.length / 2; i++) {
+        left = left + word[i];
+    }
+
+    for (let i = word.length; i > word.length / 2; i--) {
+        right = right + word[i-1];
+    }
+
+    if(left === right){
+        return true;
+    }
+
+    return false;
+}
+
+
+let ans11 = isPalindrome("abba");
+console.log(ans11);
+
+
+function isPalindrome2(word){
+    // substring accepts 2 indexes, let index, right index (not included)
+
+    let left,right;
+
+    // zugi
+    if(word % 2 === 0){            //   4/2 = 2
+        left = word.substring(0 , word.length/2);
+        right = word.substring(word.length/2 , word.length);
+    }
+    //lo zugi
+    else{                          //   5/2 = 2.5 ~ 2
+        left = word.substring(0 , word.length/2);
+        right = word.substring(word.length/2 + 1 , word.length);
+    }
+
+    if(left.length !== right.length){
+        return false;
+    }
+
+    let rightIndex = right.length-1;
+
+    // left = ab   right = bc
+    for (let i = 0; i < left.length; i++) {
+
+        if(left[i] === right[rightIndex]){
+
+            rightIndex--;
+
+        }else{
+
+            return false;
+
+        }
+    }
+
+    return true;
+}
+
+
+let result1 = isPalindrome2("abbba");
+console.log(result1);
+
+
+
+
+
+function ifElse(num){
+    if(num === 1){
+        console.log("if wins");
+    }
+    else{
+        console.log("else wins");
+    }
+}
+
+ifElse(32);
+
+
+
+
+function arrayConcat(array1, array2){
+    let resultArray = array1.concat(array2);
+    return resultArray;
+}
+
+
+console.log( arrayConcat(['a','b','c'],[1,2,3]) );
+
+// 2
+
+
+function concatByOrder(array1, array2){
+
+    let newArray = [];
+
+    for (let i = 0; i < array1.length; i++) {
+        newArray.push(array1[i]);
+        newArray.push(array2[i]);
+    }
+    return newArray;
+}
+
+
+
+// Write a function that combines two lists by alternatingly taking elements, e.g. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+
+//  [1,2,3] [a,b,c] [4,5,6]  = [1,2,3,-,a,b,c,-,4,5,6]
